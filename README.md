@@ -47,6 +47,14 @@ A full-stack, production-ready e-commerce platform similar to Amazon, built with
   - Order management
   - Analytics and statistics
 
+- ✅ **Mobile App (iOS & Android)**
+  - Native mobile experience with React Native
+  - Biometric authentication (Face ID / Touch ID)
+  - Push notifications
+  - Offline support
+  - Mobile-optimized UI/UX
+  - App Store & Play Store ready
+
 ## 🏗️ Architecture
 
 ### Tech Stack
@@ -72,6 +80,17 @@ A full-stack, production-ready e-commerce platform similar to Amazon, built with
 - **Forms**: React Hook Form + Zod
 - **HTTP Client**: Axios
 - **Payment UI**: Stripe Elements
+
+#### Mobile
+- **Framework**: React Native 0.73+
+- **Language**: TypeScript
+- **Navigation**: React Navigation 6
+- **State Management**: Zustand
+- **UI Components**: React Native Paper
+- **Icons**: React Native Vector Icons
+- **Payments**: Stripe React Native SDK
+- **Biometrics**: React Native Biometrics
+- **Push Notifications**: Firebase Cloud Messaging
 
 #### Infrastructure
 - **Containerization**: Docker & Docker Compose
@@ -126,6 +145,20 @@ ecommerce-platform/
 │   ├── tailwind.config.ts
 │   ├── package.json
 │   └── tsconfig.json
+├── mobile/
+│   ├── ios/               # iOS native code
+│   ├── android/           # Android native code
+│   ├── src/
+│   │   ├── navigation/    # Navigation setup
+│   │   ├── screens/       # App screens
+│   │   ├── components/    # Reusable components
+│   │   ├── store/         # Zustand stores
+│   │   ├── services/      # API services
+│   │   ├── config/        # App configuration
+│   │   └── utils/         # Utilities
+│   ├── App.tsx
+│   ├── package.json
+│   └── README.md
 ├── docker-compose.yml
 └── README.md
 ```
@@ -285,6 +318,26 @@ npm install
 # Start development server
 npm run dev
 ```
+
+**Mobile App:**
+
+```bash
+cd mobile
+
+# Install dependencies
+npm install
+
+# Install iOS dependencies (Mac only)
+cd ios && pod install && cd ..
+
+# Run on iOS
+npm run ios
+
+# Run on Android
+npm run android
+```
+
+See `mobile/README.md` for detailed mobile app setup instructions.
 
 ### 🗄️ Database Setup
 
